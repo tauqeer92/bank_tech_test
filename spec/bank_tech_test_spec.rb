@@ -1,4 +1,4 @@
-require_relative '../lib/bank_tech_test'
+require_relative '../lib/banking'
 
 RSpec.describe Banking do
   context 'depositing into bank' do
