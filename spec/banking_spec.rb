@@ -4,8 +4,8 @@ RSpec.describe Banking do
   context 'depositing into bank' do
     it 'depositing 500, expect balance to be 500' do
         banking = Banking.new
-        banking.deposit(500)
-        expect(banking.balance).to eq (500)
+        banking.deposit(500.00)
+        expect(banking.balance).to eq (500.00)
     end
 
     it 'depositing twice, expect balance to be 1000' do
