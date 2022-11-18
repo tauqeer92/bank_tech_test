@@ -8,7 +8,7 @@ When printing the statement, it will show a list of transactions with the most r
 
 Each individual transaction will have the date of the transaction, whether the transaction was a debit or credit transaction and the final balance after the transaction.
 
-One of the challenges I faced while developing this program was making the transactions unique and removing dupicate transactions so they don't repeat when printing the statement. 
+One of the challenges I faced while developing this program was making the transactions unique and removing duplicate transactions so they don't repeat when printing the statement. 
 
 However, writing good quality tests enabled me to overcome this challenge to see where exactly the issue was.
 
@@ -22,9 +22,9 @@ git clone https://github.com/tauqeer92/bank_tech_test.git
 
 # How To Run
 
-Next we need to move in the correct directory and run irb which will allow us to run and interact with the program in the terminal.
+Next, we need to move into the correct directory and run irb which will allow us to run and interact with the program in the terminal.
 
-We then need to require the 'application.rb' in irb.
+We then need to require 'application.rb' in irb.
  
  ```
  cd bank_tech_test
