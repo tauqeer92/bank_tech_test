@@ -18,14 +18,14 @@ RSpec.describe Banking do
     it 'depositing 400, expect transactions to include credit:400' do
         banking = Banking.new
         banking.deposit(400)
-        expect(banking.transactions).to eq ([{credit: 400}])
+        expect(banking.transactions).to eq ([{credit: 400, :id=>1}])
     end
 
     it 'depositing twice, expect 2 hashes in transactions with credit' do
         banking = Banking.new
         banking.deposit(400)
         banking.deposit(700)
-        expect(banking.transactions).to eq ([{credit: 400}, {credit: 700}])
+        expect(banking.transactions).to eq ([{credit: 400, :id=>1}, {credit: 700, :id=>2}])
     end
 
   end
@@ -42,7 +42,7 @@ RSpec.describe Banking do
         banking = Banking.new
         banking.deposit(400)
         banking.withdraw(200)
-        expect(banking.transactions).to eq ([{credit: 400}, {debit: 200}])
+        expect(banking.transactions).to eq ([{credit: 400, :id=>1}, {debit: 200, :id=>2}])
     end
   end
   
