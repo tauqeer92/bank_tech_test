@@ -12,6 +12,8 @@ class Statement
     transactions = banking.transactions()
     @loaded_transactions.push(transactions)
     @loaded_transactions.flatten!
+    
+    return @loaded_transactions
   end
 
   def duplicate_checker
@@ -23,17 +25,18 @@ class Statement
         @added_transactions.push(transaction)
       end  
     end
+    @added_transactions
   end
 
   def generate_statement()
     @loaded_transactions.each do |transaction|
       if transaction.keys[1] == :credit
         @balance += transaction[:credit]
-        credit_formatted_transaction = "\n 14/01/2023 || #{transaction[:credit]} || || #{@balance}"
+        credit_formatted_transaction = "\n #{transaction[:date]} || #{transaction[:credit]} || || #{@balance}"
         @list_formatted_transactions.push(credit_formatted_transaction)
       else
         @balance -= transaction[:debit]
-        debit_formatted_transaction = "\n 14/01/2023 || || #{transaction[:debit]} || #{@balance}"
+        debit_formatted_transaction = "\n #{transaction[:date]} || || #{transaction[:debit]} || #{@balance}"
         @list_formatted_transactions.push(debit_formatted_transaction)
       end
     end

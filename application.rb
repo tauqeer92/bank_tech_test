@@ -1,5 +1,6 @@
 require_relative './lib/banking'
 require_relative './lib/statement'
+require_relative './lib/date'
 
 class Application
   
@@ -32,7 +33,7 @@ class Application
         elsif choice == '3'
             @statement.load_transactions(@banking)
             @statement.duplicate_checker()
-            @statement.generate_statement() # this still affects the amount if you switch between the two
+            @statement.generate_statement()
             @io.puts @statement.read_statement()
         elsif choice == '4'
             var += 'stop'
@@ -46,7 +47,9 @@ class Application
 
 end
 
-banking = Banking.new
+
+date = Date.new
+banking = Banking.new(date)
 statement = Statement.new
 
 new = Application.new(Kernel, banking, statement)
