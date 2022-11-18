@@ -8,11 +8,11 @@ You can also print a statement which allows you to see a list of transactions
 
 # How To Install 
 
-- Clone the directory here https://github.com/tauqeer92/bank_tech_test.git
+The first step is to clone the directory by doing the following
 
-'''
+```
 git clone https://github.com/tauqeer92/bank_tech_test.git
-'''
+```
 
 # How To Run
  
@@ -24,11 +24,9 @@ git clone https://github.com/tauqeer92/bank_tech_test.git
 
 # How To Run Tests
 
-I have used RSpec throughout the TDD process to test the code.
+I have used RSpec throughout the TDD process. In order to test the code please type the following in the terminal
 
-In order to test the code please write the following in the terminal
-
-'''
+```
 rspec
 
-'''
+```
